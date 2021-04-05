@@ -11,9 +11,6 @@ permissions:
   rankpicker.admin:
     description: ability to use admin commands
     default: op
-  rankpicker.open:
-    description: always forces a rank picking menu to be opened and can not be closed on join
-    default: true
   rankpicker.close:
-    description: allows menu to be closed
+    description: menu no longer persists/gets given on join
     default: false
