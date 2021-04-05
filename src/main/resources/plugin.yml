@@ -1,0 +1,16 @@
+name: ${project.name}
+version: ${project.version}
+main: net.cyberflame.rankpicker.RankPicker
+depend: [PlaceholderAPI]
+authors: [CyberFlame]
+description: Force new players to pick a rank on join through a container menu
+commands:
+  rankpicker:
+    description: Rank picking admin commands
+permissions:
+  rankpicker.admin:
+    description: ability to use admin commands
+    default: op
+  rankpicker.open:
+    description: always forces a rank picking menu to be opened and can not be closed on join
+    default: op
