@@ -25,7 +25,7 @@ public class PlayerListener implements Listener {
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
-		if (p.hasPermission("rankpicker.open")) {
+		if (!p.hasPermission("rankpicker.close")) {
 		  Bukkit.getScheduler().runTaskLater(plugin, new Runnable() {
 		    @Override
         public void run() {
