@@ -40,10 +40,10 @@ public class Commands implements CommandExecutor {
 		}
 		
 		if (args.length == 0 || args.length > 0 && args[0].equalsIgnoreCase("help")) {
-			sms(s, "&bRankPicker &f" + plugin.getDescription().getVersion() + " &bHelp");
-			sms(s, "&bCreated by: &cCyberFlame");
-			sms(s, "/rankpicker open <player> &8- &7Set a player in the rank picker menu");
-			sms(s, "/rankpicker reload &8- &7Reload the plugin");
+			sms(s, "&bRankPicker &f" + plugin.getDescription().getVersion() + " &aHelp Menu");
+			sms(s, "&eCreated by: &cCyberFlame");
+			sms(s, "&6/rankpicker open <player> &8- &7Set a player in the rank picker menu");
+			sms(s, "&6/rankpicker reload &8- &7Reload the plugin");
 			return true;
 		} else if (args[0].equalsIgnoreCase("add") || args[0].equalsIgnoreCase("open")) {
 			
