@@ -41,7 +41,7 @@ public class Commands implements CommandExecutor {
 		
 		if (args.length == 0 || args.length > 0 && args[0].equalsIgnoreCase("help")) {
 			sms(s, "&bRankPicker &f" + plugin.getDescription().getVersion() + " &bHelp");
-			sms(s, "&bcreated by: &cCyberFlame");
+			sms(s, "&bCreated by: &cCyberFlame");
 			sms(s, "/rankpicker open <player> &8- &7Set a player in the rank picker menu");
 			sms(s, "/rankpicker reload &8- &7Reload the plugin");
 			return true;
