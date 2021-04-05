@@ -51,7 +51,7 @@ public class PlayerListener implements Listener {
 			return;
 		}
 			
-		if (!p.hasPermission("rankpicker.open")) {
+		if (p.hasPermission("rankpicker.close")) {
 			return;
 		}
 			

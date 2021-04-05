@@ -13,4 +13,7 @@ permissions:
     default: op
   rankpicker.open:
     description: always forces a rank picking menu to be opened and can not be closed on join
-    default: op
+    default: true
+  rankpicker.close:
+    description: allows menu to be closed
+    default: false
