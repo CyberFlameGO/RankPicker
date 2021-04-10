@@ -67,6 +67,9 @@ public class PlayerListener implements Listener {
 					if (who == null) {
 						return;
 					}
+					if (p.hasPermission("rankpicker.close")) {
+						return;
+					}
 					
 					who.openInventory(inventory);
 				}
