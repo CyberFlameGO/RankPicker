@@ -36,7 +36,7 @@ public class PlayerListener implements Listener {
 		}
 	}
 
-	@EventHandler(priority = EventPriority.HIGH)
+	@EventHandler(priority = EventPriority.LOWEST)
 	public void onClose(InventoryCloseEvent e) {
 		
 		Inventory inventory = e.getInventory();
@@ -75,7 +75,7 @@ public class PlayerListener implements Listener {
 			return;
 		}
 
-	@EventHandler(priority = EventPriority.LOWEST)
+	@EventHandler(priority = EventPriority.HIGH)
 	public void onClick(InventoryClickEvent e) {
 		
 		if (!(e.getWhoClicked() instanceof Player)) {
