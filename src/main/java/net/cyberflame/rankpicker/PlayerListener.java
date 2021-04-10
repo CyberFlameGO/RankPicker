@@ -89,6 +89,7 @@ public class PlayerListener implements Listener {
 		Player p = (Player) e.getWhoClicked();
 		int slot = e.getRawSlot();
 		Item i = Item.getMenuItem(slot);
+		p.closeInventory();
 		
 		if (i == null) {
 			return;
