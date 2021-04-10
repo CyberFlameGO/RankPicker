@@ -30,40 +30,13 @@ public class PlayerListener implements Listener {
 		    @Override
         public void run() {
           Menu m = new Menu(plugin, p);
+	  Bukkit.broadcastMessage("fdggfdggfg");
           p.openInventory(m.getInventory());
         }
       }, 20L);
 		}
 	}
 
-	@EventHandler(priority = EventPriority.LOWEST)
-	public void onClick(InventoryClickEvent e) {
-		
-		if (!(e.getWhoClicked() instanceof Player)) {
-			return;
-		}
-		if (!(e.getClickedInventory().getHolder() instanceof Menu)) {
-			return;
-		}
-		
-		e.setCancelled(true);
-		Player p = (Player) e.getWhoClicked();
-		int slot = e.getRawSlot();
-		Item i = Item.getMenuItem(slot);
-		
-		if (i == null) {
-			return;
-		}
-		
-		if (i.getClickHandler() == null) {
-			return;
-		}
-
-		i.getClickHandler().onClick(p);
-		p.closeInventory();
-		return;		
-	}
-	
 	@EventHandler(priority = EventPriority.HIGH)
 	public void onClose(InventoryCloseEvent e) {
 		
@@ -95,10 +68,40 @@ public class PlayerListener implements Listener {
 					if (who == null) {
 						return;
 					}
+					Bukkit.broadcastMessage("peenman");
 					who.openInventory(inventory);
 				}
 				
 			}, 20L);
 			return;
 		}
+
+	@EventHandler(priority = EventPriority.LOWEST)
+	public void onClick(InventoryClickEvent e) {
+		
+		if (!(e.getWhoClicked() instanceof Player)) {
+			return;
+		}
+		if (!(e.getClickedInventory().getHolder() instanceof Menu)) {
+			return;
+		}
+		
+		e.setCancelled(true);
+		Player p = (Player) e.getWhoClicked();
+		int slot = e.getRawSlot();
+		Item i = Item.getMenuItem(slot);
+		
+		if (i == null) {
+			return;
+		}
+		
+		if (i.getClickHandler() == null) {
+			return;
+		}
+
+		i.getClickHandler().onClick(p);
+		p.closeInventory();
+		return;		
+	}
+
 }
