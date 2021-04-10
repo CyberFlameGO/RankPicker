@@ -30,7 +30,6 @@ public class PlayerListener implements Listener {
 		    @Override
         public void run() {
           Menu m = new Menu(plugin, p);
-	  Bukkit.broadcastMessage("fdggfdggfg");
           p.openInventory(m.getInventory());
         }
       }, 20L);
@@ -68,7 +67,7 @@ public class PlayerListener implements Listener {
 					if (who == null) {
 						return;
 					}
-					Bukkit.broadcastMessage("peenman");
+					
 					who.openInventory(inventory);
 				}
 				
